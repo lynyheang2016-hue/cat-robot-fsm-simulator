@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="container">
+        <input type="text" id="inputCmd">
+        <button id="inputBtn">Submit</button>
+    </div> -->
+    <section class="home">
+    <div class="container">
+    <div class="left-side">
+     <div class="grid">
+          <div id="cat-idling-img">
+        <img src="yellowCatIdling-Photoroom.png" alt="cat idling"/>
+    </div>
+    <div id="cat-pickWool-img">
+        <img src="yellowCatWool-Photoroom.png" alt="Cat picked wool"/>
+    </div>
+    <div id="wool-img">
+        <img src="bluewool-Photoroom.png" alt="wool"/>
+     </div>
+   
+</div>
+     <div class="control"> 
+        <button data-cmd="ST" >Start</button>
+        <button data-cmd="F">Forward</button>
+        <button data-cmd="B">Backward</button>
+        <button data-cmd="L">Left</button>
+        <button data-cmd="R">Right</button>
+        <button data-cmd="P">Pick</button>
+        <button data-cmd="D">Drop wool</button>
+        <button data-cmd="SP">Stop</button>
+        <button data-cmd="C">Recharge</button>
+    </div> 
+ </div>
+    <div class="right-side">
+    <div class="rules-panel">
+        <h3 id="rule-h3">Rules</h3>
+        <ul>
+            <li>1. Must start with Start, end with Stop</li>
+            <li>2. At least one move (F or B)</li>
+            <li>3. Pick before Drop, no double-pick</li>
+            <li>4. At least one full pick→drop cycle</li>
+            <li>6. Energy max 3, move costs 1, Recharge resets</li>
+            <li>10. No two turns (L/R) in a row</li>
+            <li>13. Never complete (F→R) x4</li>
+            <li>14. |L count − R count| ≤ 2</li>
+        </ul>
+    </div>
+    <div class="state-panel">
+    </div>
+    <div id="cmdListBox"></div>
+</div>
+    
+    
+    </section>
+    <script src="simulation.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
